@@ -17,7 +17,7 @@ function [volume, area] = computeConvexHullVolumeAndArea(vertices)
     % 写顶点数据到临时文件
     tmpFileName = tempname;
     fileID = fopen(tmpFileName, 'w');
-    fprintf(fileID, '%d\n', size(vertices, 2));
+    fprintf(fileID, '%d 3\n', size(vertices, 2));
     fprintf(fileID, '%.6f %.6f %.6f\n', vertices');
     fclose(fileID);
     
